@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorAccent"
+    android:layout_marginBottom="@dimen/item_margin_bottom">
+
+    <FrameLayout
+        android:id="@+id/prod_image_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/round"/>
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/prod_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name"
+        android:layout_toEndOf="@id/prod_image_iv"
+        android:layout_toLeftOf="@id/prod_image_iv"
+        android:layout_toRightOf="@id/prod_image_iv"
+        android:layout_marginLeft="@dimen/margin_center"
+        />
+    <TextView
+        android:id="@+id/prod_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="price"
+        android:layout_toEndOf="@id/prod_image_iv"
+        android:layout_toLeftOf="@id/prod_image_iv"
+        android:layout_toRightOf="@id/prod_image_iv"
+        android:layout_below="@id/prod_name_tv"
+        android:layout_marginLeft="@dimen/margin_center"
+        />
+
+    <Button
+        android:id="@+id/product_add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="add"/>
+
+</RelativeLayout>

@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,6 +32,7 @@ public class ProductRecyclerView extends RecyclerView.Adapter<ProductRecyclerVie
          Product product = products.get(position);
          holder.name.setText(product.getName());
          holder.price.setText(String.valueOf(product.getPrice()));
+         holder.id.setTag(product.getId());
         // holder.image.setImageResource(R.drawable.round);
     }
 
@@ -40,6 +42,7 @@ public class ProductRecyclerView extends RecyclerView.Adapter<ProductRecyclerVie
     }
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
+        public Button id;
         public TextView name;
         public TextView price;
         public ImageView image;
@@ -47,7 +50,7 @@ public class ProductRecyclerView extends RecyclerView.Adapter<ProductRecyclerVie
 
         public ProductViewHolder(View itemView) {
             super(itemView);
-
+            id = itemView.findViewById(R.id.product_add_btn);
             name = itemView.findViewById(R.id.prod_name_tv);
             price = itemView.findViewById(R.id.prod_price_tv);
 

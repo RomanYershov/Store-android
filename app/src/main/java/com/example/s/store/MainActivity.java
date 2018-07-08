@@ -6,8 +6,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.s.store.models.Product;
 import com.example.s.store.models.ProductRecyclerView;
@@ -30,9 +33,14 @@ public class MainActivity extends AppCompatActivity {
         ProductRecyclerView productAdapter = new ProductRecyclerView(productsList);
         recyclerView.setAdapter(productAdapter);
 
-        Button btnAdd = findViewById(R.id.product_add_btn);
 
 
+    }
+
+    public  void onClickBtnAdd(View view){
+        View parent = (View) view.getParent();
+        TextView textView = (TextView)parent.findViewById(R.id.prod_name_tv);
+        Toast.makeText(MainActivity.this, textView.getText(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -50,9 +58,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void initialProduct() {
         productsList = new ArrayList<>();
-        productsList.add(new Product("Tomato", 250,1));
-        productsList.add(new Product("Potato", 150, 1));
-        productsList.add(new Product("Cucumber", 200, 1));
+        productsList.add(new Product(1,"Tomato", 250,1));
+        productsList.add(new Product(2,"Potato", 150, 1));
+        productsList.add(new Product(3,"Cucumber", 200, 1));
     }
 
 

@@ -3,6 +3,23 @@ package com.example.s.store.models;
 import android.widget.ImageView;
 
 public class Product {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Product(int id, String name, int price, int image) {
+        this.id = id;
+
+        this.name = name;
+        this.price = price;
+        this.image = image;
+    }
+
+    private int id;
     private String name;
     private int price;
     private int image;
@@ -31,10 +48,4 @@ public class Product {
         this.image = image;
     }
 
-    public Product(String name, int price, int image) {
-
-        this.name = name;
-        this.price = price;
-        this.image = image;
-    }
 }

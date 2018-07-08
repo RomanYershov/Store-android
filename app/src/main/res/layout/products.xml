@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/colorAccent"
-    android:layout_marginBottom="@dimen/item_margin_bottom">
+    android:padding="@dimen/padding_card"
+    android:layout_marginBottom="1dp">
 
     <FrameLayout
         android:id="@+id/prod_image_iv"
@@ -37,6 +38,7 @@
         android:layout_toRightOf="@id/prod_image_iv"
         android:layout_below="@id/prod_name_tv"
         android:layout_marginLeft="@dimen/margin_center"
+        android:layout_marginTop="@dimen/item_margin_bottom"
         />
 
     <Button
@@ -44,6 +46,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:text="add"/>
+        android:layout_marginRight="@dimen/item_margin_bottom"
+        android:text="add"
+        android:tag="addBtn"
+        android:onClick="onClickBtnAdd"/>
 
 </RelativeLayout>
